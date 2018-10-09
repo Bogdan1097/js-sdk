@@ -1,6 +1,6 @@
 import {NotFoundError, NetworkError, BadRequestError} from "./errors";
 import forEach from 'lodash/forEach';
-import { xdr, Account, hash } from "tokend-js-base";
+import { xdr, Account, hash } from "swarm-js-base";
 import { Config } from "./config";
 import constants from './const';
 import { TimeSyncer } from './time-syncer';
