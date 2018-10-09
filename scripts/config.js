@@ -97,7 +97,7 @@ const passphrases = {
 const urls = {
     local: 'http://127.0.0.1:8000',
     dev: 'https://api-dev.swarm.fund',
-    staging: 'http://staging.api.sun.swarm.fund'
+    staging: 'http://api.tokend.io'
 }
 
 //env is one of the {'local', 'dev', 'staging'}

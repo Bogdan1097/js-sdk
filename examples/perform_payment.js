@@ -13,7 +13,7 @@ function findBalanceByAsset(balances, asset) {
 // set network passphrase for staging
 StellarSdk.Network.use(new StellarSdk.Network("SUN Staging Network ; December 2017"));
 // create server instance - helper to communicate with the network
-let server = new StellarSdk.Server("https://staging.api.sun.swarm.fund", { allowHttp: false });
+let server = new StellarSdk.Server("https://api.tokend.io", { allowHttp: false });
 let myAccountKP = StellarSdk.Keypair.fromSecret("SAA4QWGWYOQKXUMULSRVZMW22QN4UP4BI5F72ZB7R5CD4CH6XAEV4TQU");
 let destinationAccountID = "GDS67HI27XJIJEL7IGHVJVNHPXZLMW6F3O45OXIMKAUNGIR2ROBUKTT4";
 let asset = "SUN";

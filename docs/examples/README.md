@@ -67,9 +67,9 @@ server.submitOperation(op, sourceID, signerKP);
 
 ```js
 //  Example of payment submission:
-var JsSdk = require("swarm-js-sdk");
+var JsSdk = require("tokend-js-sdk");
 JsSdk.Network.use(new JsSdk.Network("SUN Staging Network ; December 2017"));
-var server = new JsSdk.Server('http://staging.api.sun.swarm.fund', { allowHttp: true });
+var server = new JsSdk.Server('http://api.tokend.io', { allowHttp: true });
 
 function getBalanceIdForAsset(asset, exchangeKp) {
     return server.loadAccountWithSign(exchangeKp.accountId(), exchangeKp)
@@ -191,16 +191,16 @@ Response example:
  {
     "_links": {
       "self": {
-        "href": "http://staging.api.sun.swarm.fund/operations/384829069725697"
+        "href": "http://api.tokend.io/operations/384829069725697"
       },
       "transaction": {
-        "href": "http://staging.api.sun.swarm.fund/transactions/"
+        "href": "http://api.tokend.io/transactions/"
       },
       "succeeds": {
-        "href": "http://staging.api.sun.swarm.fund/effects?order=desc\u0026cursor=384829069725697"
+        "href": "http://api.tokend.io/effects?order=desc\u0026cursor=384829069725697"
       },
       "precedes": {
-        "href": "http://staging.api.sun.swarm.fund/effects?order=asc\u0026cursor=384829069725697"
+        "href": "http://api.tokend.io/effects?order=asc\u0026cursor=384829069725697"
       }
     },
     "id": "384829069725697",
@@ -241,7 +241,7 @@ Let's say you want to look at an account's transaction history.  You can use the
 
 ```javascript
 var JsSdk = require('js-sdk')
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
+var server = new JsSdk.Server('https://api.tokend.io');
 var accountId = 'GBBORXCY3PQRRDLJ7G7DWHQBXPCJVFGJ4RGMJQVAX6ORAUH6RWSPP6FM';
 
 server.transactions()
@@ -268,7 +268,7 @@ js-sdk provides streaming support for Horizon endpoints using `EventSource`.  Yo
 Try submitting a transaction (via the guide above) while running the following code example.
 ```javascript
 var JsSdk = require('js-sdk')
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
+var server = new JsSdk.Server('https://api.tokend.io');
 
 // Get a message any time a payment occurs. Cursor is set to "now" to be notified
 // of payments happening starting from when this script runs (as opposed to from

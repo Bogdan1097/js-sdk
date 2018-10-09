@@ -37,7 +37,7 @@ to Horizon. Starting with a [server](./api/server.md) object, you can chain meth
 
 ```js
 var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
+var server = new JsSdk.Server('https://api.tokend.io');
 // get a list of transactions that occurred in ledger 1400
 server.transactions()
     .forLedger(1400)
@@ -60,7 +60,7 @@ For example, to log instances of transactions from a particular account:
 
 ```javascript
 var JsSdk = require('js-sdk')
-var server = new JsSdk.Server('http://staging.api.sun.swarm.fund');
+var server = new JsSdk.Server('http://api.tokend.io');
 var lastCursor=0; // or load where you left off
 
 var txHandler = function (txResponse) {

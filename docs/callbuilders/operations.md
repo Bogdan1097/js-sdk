@@ -49,13 +49,13 @@ Response example:
 {
   "_links": {
     "self": {
-      "href": "https://staging.api.sun.swarm.fund/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=asc\u0026limit=10\u0026cursor="
+      "href": "https://api.tokend.io/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=asc\u0026limit=10\u0026cursor="
     },
     "next": {
-      "href": "https://staging.api.sun.swarm.fund/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=asc\u0026limit=10\u0026cursor=15685220569089"
+      "href": "https://api.tokend.io/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=asc\u0026limit=10\u0026cursor=15685220569089"
     },
     "prev": {
-      "href": "https://staging.api.sun.swarm.fund/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=desc\u0026limit=10\u0026cursor=1331439865857"
+      "href": "https://api.tokend.io/accounts/GAHKZT6X4WIEDEET2P5PHOL4OEE24KMHTJ2IWZUWUR22YROGKUXKLIET/operations?order=desc\u0026limit=10\u0026cursor=1331439865857"
     }
   },
   "_embedded": {
@@ -63,16 +63,16 @@ Response example:
       {
         "_links": {
           "self": {
-            "href": "https://staging.api.sun.swarm.fund/operations/1331439865857"
+            "href": "https://api.tokend.io/operations/1331439865857"
           },
           "transaction": {
-            "href": "https://staging.api.sun.swarm.fund/transactions/"
+            "href": "https://api.tokend.io/transactions/"
           },
           "succeeds": {
-            "href": "https://staging.api.sun.swarm.fund/effects?order=desc\u0026cursor=1331439865857"
+            "href": "https://api.tokend.io/effects?order=desc\u0026cursor=1331439865857"
           },
           "precedes": {
-            "href": "https://staging.api.sun.swarm.fund/effects?order=asc\u0026cursor=1331439865857"
+            "href": "https://api.tokend.io/effects?order=asc\u0026cursor=1331439865857"
           }
         },
         "id": "1331439865857",

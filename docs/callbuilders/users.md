@@ -13,20 +13,3 @@ By default, `users()` provides access to the `users_all` Horizon endpoint.  By c
 | ---------------- | ---------- | ----------------------- |
 | `users()`        |            | Load all users.         |
 | `.accountId(id)` | `string`   | Load single user by id. |
-
-## Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.users()
-  .accountId('GD2GHA9...')
-  .callWithSignature(adminKP)
-  .then(function (result) {
-    console.log(result);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-```

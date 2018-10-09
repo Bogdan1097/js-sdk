@@ -15,21 +15,3 @@ By default, `withdrawals()` provides access to the `reviewable_requests_all` Hor
 | `.forDestAsset(asset)`                  | `string`   | Filters withdrawals by destination asset. For example: "BTC"  |
 | `.forRequester(requestor)`          | `string`   | Filters withdrawals by requester. For example: "GDRYPV..."  |
 | `.forState(state)`          | `number`   | Filters withdrawals by state. |
-
-
-## Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.withdrawals()
-  .forDestAsset("BTC")
-  .callWithSignature(adminKP)
-  .then(function (result) {
-    console.log(result);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-```

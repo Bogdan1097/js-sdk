@@ -31,16 +31,6 @@ It is important to note that `server` methods query to `Horizon` endpoints.  Eac
 | [`loadAccount(accountId)`][14]         | `string`      | Load an `Account` details by passed accountID. |
 | [`submitTransaction(transaction)`][15] | `Transaction` | Submits a transaction to the network.    |
 
-### Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.accounts()
-  ...
-```
-
 [1]: ./call_builder.md
 [2]: ./callbuilders/accounts.md
 [3]: ./callbuilders/fees.md

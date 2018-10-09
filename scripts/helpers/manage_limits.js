@@ -1,5 +1,5 @@
 const StellarSdk = require('../../lib/index');
-var _swarmJsBase = require("swarm-js-base");
+var _swarmJsBase = require("tokend-js-base");
 
 function createLimits(testHelper, source, assetCode, accountID, accountType) {
     const opts = {

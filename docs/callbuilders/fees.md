@@ -22,20 +22,3 @@ By default, `fees()` provides access to the `fees_all` Horizon endpoint.  By cha
 | `asset`     | `string` | Filter fee by passed asset.          |
 | `accountId` | `string` | Filter fee by passed user accountId. |
 | `amount`    | `string` | Filter fee by passed amount.         |
-
-## Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.fees()
-  .fee(0, 'SUN', 'GD2GHA9...', '42.4231')
-  .call()
-  .then(function (result) {
-    console.log(result);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-```

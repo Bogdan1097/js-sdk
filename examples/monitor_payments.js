@@ -2,10 +2,10 @@ const StellarSdk = require('../lib/index');
 // set network passphrase for staging
 StellarSdk.Network.use(new StellarSdk.Network("SUN Staging Network ; December 2017"));
 // create server instance - helper to communicate with the network
-let server = new StellarSdk.Server("https://staging.api.sun.swarm.fund", { allowHttp: false });
+let server = new StellarSdk.Server("https://api.tokend.io", { allowHttp: false });
 let myAccountKP = StellarSdk.Keypair.fromSecret("SAA4QWGWYOQKXUMULSRVZMW22QN4UP4BI5F72ZB7R5CD4CH6XAEV4TQU")
 
-// load all the payments from the beging of time. Call with signature - as we are trying to get some private info 
+// load all the payments from the beging of time. Call with signature - as we are trying to get some private info
 // - need to prove that we are allowed to access it
 server.payments().forAccount(myAccountKP.accountId()).callWithSignature(myAccountKP).then(response => {
     let records = response.records;
@@ -19,7 +19,7 @@ server.payments().forAccount(myAccountKP.accountId()).callWithSignature(myAccoun
         if (payment.from == myAccountKP.accountId()) {
             continue;
         }
-        
+
         console.log(payment);
 }
 })

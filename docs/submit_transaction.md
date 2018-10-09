@@ -15,7 +15,7 @@ You can build a transaction locally (see [this example](../readme.md#building-tr
 
 ```js
 var JsSdk = require('js-sdk')
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
+var server = new JsSdk.Server('https://api.tokend.io');
 
 var transaction = new JsSdk.TransactionBuilder(account)
         // this operation funds the new account with XLM

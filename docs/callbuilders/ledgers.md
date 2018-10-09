@@ -19,21 +19,3 @@ By default, `ledgers()` provides access to the `ledgers_all` Horizon endpoint.  
 | `.order({"asc" or "desc"})` | `string`                                 | Order the returned collection in "asc" or "desc" order. |
 | `.call()`                   |                                          | Triggers a HTTP Request to the Horizon server based on the builder's current configuration.  Returns a `Promise` that resolves to the server's response.  For more on `Promise`, see [these docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). |
 | `.stream({options})`        | object of [properties](https://developer.mozilla.org/en-US/docs/Web/API/EventSource#Properties) | Creates an `EventSource` that listens for incoming messages from the server.  URL based on builder's current configuration.  For more on `EventSource`, see [these docs](https://developer.mozilla.org/en-US/docs/Web/API/EventSource). |
-
-## Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.ledgers()
-  .limit(15)
-  .order("desc")
-  .call()
-  .then(function (ledgerResult) {
-    console.log(ledgerResult);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-```

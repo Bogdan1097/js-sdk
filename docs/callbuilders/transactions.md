@@ -21,21 +21,3 @@ By default, `transactions()` provides access to the `transactions_all` Horizon e
 | `.order({"asc" or "desc"})`              | `string`                                 | Order the returned collection in "asc" or "desc" order. |
 | `.call()`                                |                                          | Triggers a HTTP Request to the Horizon server based on the builder's current configuration.  Returns a `Promise` that resolves to the server's response.  For more on `Promise`, see [these docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). |
 | `.stream({options})`                     | object of [properties](https://developer.mozilla.org/en-US/docs/Web/API/EventSource#Properties) | Creates an `EventSource` that listens for incoming messages from the server.  URL based on builder's current configuration.  For more on `EventSource`, see [these docs](https://developer.mozilla.org/en-US/docs/Web/API/EventSource). |
-
-## Examples
-
-```js
-var JsSdk = require('js-sdk');
-var server = new JsSdk.Server('https://staging.api.sun.swarm.fund');
-
-server.transactions()
-  .forAddress("GBS43BF24ENNS3KPACUZVKK2VYPOZVBQO2CISGZ777RYGOPYC2FT6S3K")
-  .cursor("15530601746432")
-  .call()
-  .then(function (transactionResult) {
-    console.log(transactionResult);
-  })
-  .catch(function (err) {
-    console.error(err);
-  })
-```
